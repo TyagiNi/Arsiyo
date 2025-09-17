@@ -1,2 +1,2 @@
-# Arsiyo-website
+# Arsiyo
 For my website
