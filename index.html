@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arsiyo - Beautiful Digital Invitations Coming Soon</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Arsiyo Events - Premium Family Celebrations</title>
     <style>
         * {
             margin: 0;
@@ -13,317 +12,574 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
-            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #8B0000 0%, #B8860B 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo-container {
             display: flex;
             align-items: center;
-            justify-content: center;
-            color: #e9ecef;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 600px;
-            padding: 2rem;
-            text-align: center;
-            background: rgba(30, 30, 30, 0.9);
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .logo {
-            font-size: 2.5rem;
-            font-weight: 600;
-            color: #f8f9fa;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.02em;
-        }
-
-        .tagline {
-            font-size: 1.1rem;
-            color: #adb5bd;
-            margin-bottom: 2rem;
-            font-weight: 300;
-        }
-
-        .main-heading {
-            font-size: 2.2rem;
-            font-weight: 500;
-            color: #f8f9fa;
-            margin-bottom: 1rem;
-            line-height: 1.3;
-        }
-
-        .description {
-            font-size: 1.1rem;
-            color: #ced4da;
-            margin-bottom: 2.5rem;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .feature {
-            padding: 1rem;
-            background: rgba(40, 40, 40, 0.6);
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .feature-icon {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .feature-text {
-            font-size: 0.9rem;
-            color: #ced4da;
-            font-weight: 400;
-        }
-
-        .form-container {
-            background: rgba(40, 40, 40, 0.8);
-            padding: 2rem;
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            margin-bottom: 2rem;
-        }
-
-        .form-title {
-            font-size: 1.3rem;
-            font-weight: 500;
-            color: #f8f9fa;
-            margin-bottom: 1rem;
-        }
-
-        .form-subtitle {
-            font-size: 0.95rem;
-            color: #adb5bd;
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group {
-            margin-bottom: 1rem;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
             gap: 1rem;
         }
 
-        input, textarea {
-            width: 100%;
-            padding: 0.875rem 1rem;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 8px;
-            font-size: 0.95rem;
-            font-family: inherit;
-            background: rgba(60, 60, 60, 0.8);
-            transition: all 0.3s ease;
-            color: #f8f9fa;
+        .logo {
+            width: 50px;
+            height: 50px;
         }
 
-        input::placeholder, textarea::placeholder {
-            color: #6c757d;
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
         }
 
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: #adb5bd;
-            background: rgba(70, 70, 70, 0.9);
-            box-shadow: 0 0 0 3px rgba(173, 181, 189, 0.2);
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
         }
 
-        textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-
-        .submit-btn {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            color: #212529;
-            padding: 0.875rem 2rem;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
+        nav a {
+            color: white;
+            text-decoration: none;
             font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.92) 0%, rgba(184, 134, 11, 0.92) 100%),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f5f5f5" width="1200" height="600"/><circle cx="200" cy="150" r="80" fill="%23FFD700" opacity="0.3"/><circle cx="800" cy="400" r="100" fill="%238B0000" opacity="0.2"/><circle cx="1000" cy="200" r="60" fill="%23DAA520" opacity="0.3"/><path d="M 100 500 Q 150 450 200 500 T 300 500" stroke="%23FFD700" stroke-width="3" fill="none" opacity="0.4"/></svg>');
+            background-size: cover;
+            background-position: center;
+            padding: 180px 2rem 120px;
+            text-align: center;
+            color: white;
+            margin-top: 70px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.2s backwards;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #FFD700 0%, #DAA520 100%);
+            color: #8B0000;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1s ease 0.4s backwards;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(184, 134, 11, 0.4);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #8B0000;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-highlight {
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.08) 0%, rgba(184, 134, 11, 0.08) 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid #B8860B;
+        }
+
+
+
+        .services {
+            background: #f8f9fa;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid #B8860B;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(139, 0, 0, 0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: #8B0000;
+            margin-bottom: 1rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            height: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #8B0000 0%, #B8860B 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-placeholder {
+            color: white;
+            text-align: center;
+            font-size: 1.2rem;
+            padding: 2rem;
+        }
+
+        .gallery-item img {
             width: 100%;
-            font-family: inherit;
+            height: 100%;
+            object-fit: cover;
         }
 
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(248, 249, 250, 0.3);
-            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        .upload-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            margin-top: 2rem;
+            text-align: center;
         }
 
-        .submit-btn:active {
-            transform: translateY(0);
+        .upload-area {
+            border: 3px dashed #B8860B;
+            border-radius: 15px;
+            padding: 3rem;
+            cursor: pointer;
+            transition: background 0.3s;
         }
 
-        .footer-text {
-            font-size: 0.85rem;
-            color: #adb5bd;
-            margin-top: 1.5rem;
+        .upload-area:hover {
+            background: #f8f9fa;
         }
 
-        @media (max-width: 600px) {
-            .container {
-                margin: 1rem;
-                padding: 1.5rem;
+        .reviews {
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.03) 0%, rgba(184, 134, 11, 0.03) 100%);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .review-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            position: relative;
+            border-left: 4px solid #B8860B;
+        }
+
+        .stars {
+            color: #FFD700;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .review-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .reviewer {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .reviewer-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #8B0000 0%, #B8860B 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .reviewer-info h4 {
+            margin-bottom: 0.2rem;
+            color: #333;
+        }
+
+        .reviewer-info p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .contact {
+            text-align: center;
+            background: linear-gradient(135deg, #8B0000 0%, #B8860B 100%);
+            color: white;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
             }
-            
-            .main-heading {
-                font-size: 1.8rem;
-            }
-            
-            .logo {
-                font-size: 2rem;
-            }
-            
-            .form-row {
+
+            .about-content {
                 grid-template-columns: 1fr;
             }
-            
-            .features {
-                grid-template-columns: 1fr;
-            }
-            
-            .templates-grid {
-                grid-template-columns: repeat(2, 1fr);
+
+            nav ul {
                 gap: 1rem;
             }
-            
-            .template-card {
-                height: 200px;
-            }
-            
-            .templates-grid .template-card::before {
-                font-size: 2rem;
-            }
-        }
 
-        .success-message {
-            display: none;
-            background: rgba(214, 248, 218, 0.8);
-            color: #155724;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            border: 1px solid rgba(195, 230, 203, 0.6);
+            .logo-text {
+                font-size: 1.5rem;
+            }
+
+
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">Arsiyo</div>
-        <div class="tagline">Crafting Beautiful Digital Invitations</div>
-        
-        <h1 class="main-heading">Something Beautiful is Coming Soon</h1>
-        <p class="description">
-            We're creating stunning, customizable digital invitation templates that work perfectly with Canva. 
-            From elegant weddings to fun birthday parties, make every event memorable with our premium designs.
-        </p>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#DAA520;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#8B0000;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#A52A2A;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="50" cy="50" r="45" fill="white" opacity="0.95"/>
+                    <path d="M 30 60 Q 50 25 70 60" stroke="url(#logoGrad)" stroke-width="5" fill="none" stroke-linecap="round"/>
+                    <circle cx="35" cy="42" r="5" fill="url(#logoGrad)"/>
+                    <circle cx="50" cy="30" r="6" fill="url(#redGrad)"/>
+                    <circle cx="65" cy="42" r="5" fill="url(#logoGrad)"/>
+                    <path d="M 25 68 L 35 63 L 28 73 Z" fill="url(#logoGrad)"/>
+                    <path d="M 70 63 L 75 68 L 65 73 Z" fill="url(#redGrad)"/>
+                    <circle cx="50" cy="75" r="4" fill="url(#logoGrad)"/>
+                    <path d="M 42 55 Q 50 50 58 55" stroke="url(#redGrad)" stroke-width="2" fill="none"/>
+                </svg>
+                <span class="logo-text">Arsiyo</span>
+            </div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <div class="features">
-            <div class="feature">
-                <div class="feature-icon">🎨</div>
-                <div class="feature-text">Canva-Ready Templates</div>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">✨</div>
-                <div class="feature-text">Premium Designs</div>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">🎉</div>
-                <div class="feature-text">All Occasions</div>
-            </div>
-        </div>
-
-        <div class="templates-preview">
-            <div class="templates-grid">
-                <div class="template-card diwali"></div>
-                <div class="template-card birthday"></div>
-                <div class="template-card baby-shower"></div>
-                <div class="template-card bachelor"></div>
-            </div>
-        </div>
-
-        <div class="form-container">
-            <h3 class="form-title">Be the First to Know</h3>
-            <p class="form-subtitle">Get notified when we launch and receive exclusive early access to our template collection.</p>
-            
-            <div class="success-message" id="successMessage">
-                Thank you! We'll notify you as soon as we launch. 🎉
-            </div>
-            
-            <form action="https://formspree.io/f/mqadvpll" method="POST" id="contactForm">
-                <input type="hidden" name="_subject" value="New Early Access Request from Arsiyo" />
-                
-                <div class="form-row">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <textarea name="message" placeholder="What type of events are you most interested in? (Optional)"></textarea>
-                </div>
-                
-                <button type="submit" class="submit-btn">Notify Me When You Launch</button>
-            </form>
-        </div>
-
-        <p class="footer-text">
-            © 2024 Arsiyo. Creating beautiful moments, one invitation at a time.
-        </p>
+    <div class="hero">
+        <h1>Crafting Unforgettable Moments</h1>
+        <p>Premium, Personalized Family Celebrations with Custom Handmade Touches</p>
+        <p style="font-size: 1.1rem; margin-top: 1rem;">Serving the East Bay Area | San Francisco Bay Area</p>
+        <button class="cta-button">Plan Your Event</button>
     </div>
 
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const form = e.target;
-            const formData = new FormData(form);
-            
-            fetch('https://formspree.io/f/mqadvpll', {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => {
-                if (response.ok) {
-                    document.getElementById('successMessage').style.display = 'block';
-                    form.reset();
-                    setTimeout(() => {
-                        document.getElementById('successMessage').style.display = 'none';
-                    }, 5000);
-                } else {
-                    throw new Error('Form submission failed');
-                }
-            })
-            .catch((error) => {
-                alert('Oops! There was an error sending your message. Please try again.');
-            });
-        });
-    </script>
-</body>
-</html>
+    <section id="about">
+        <h2>Our Story</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>What started as a passion shared between a husband and wife has blossomed into Arsiyo Events. After countless friends and family members in the Bay Area witnessed our creative celebrations and urged us to share our gift with others, we decided to turn our love for creating magical moments into a premium event management service.</p>
+                <p style="margin-top: 1rem;">Every decoration is custom-designed and handcrafted with care. Every game is personalized to your child's interests. We don't believe in cookie-cutter celebrations—each event tells your family's unique story.</p>
+            </div>
+            <div class="about-highlight">
+                <h3 style="color: #8B0000; margin-bottom: 1rem;">What Makes Us Different</h3>
+                <p>✨ 100% Custom & Handmade Designs</p>
+                <p>🎨 Personalized Themes & Activities</p>
+                <p>👨‍👩‍👧‍👦 Intimate, Home-Based Events</p>
+                <p>💝 Created with Love by a Dedicated Team</p>
+                <p>🌟 Premium, Boutique Experience</p>
+                <p>🌉 Proudly Serving the East Bay & SF Bay Area</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Specialties</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🎂</div>
+                <h3>Birthday Celebrations</h3>
+                <p>From first birthdays to milestone celebrations, we create magical experiences tailored to your child's dreams and personality.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎨</div>
+                <h3>Custom Decorations</h3>
+                <p>Every piece is handcrafted specifically for your event. No generic decorations—only unique, personalized designs that wow.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎮</div>
+                <h3>Interactive Games</h3>
+                <p>Engaging, age-appropriate activities designed to keep kids entertained while creating lasting memories for the whole family.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🪔</div>
+                <h3>Cultural Celebrations</h3>
+                <p>From Diwali to Lunar New Year, we honor diverse traditions with authentic, beautifully crafted cultural celebrations.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏠</div>
+                <h3>Home Events</h3>
+                <p>We specialize in transforming your home into an extraordinary celebration space, creating intimate magic in familiar surroundings.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💎</div>
+                <h3>Premium Service</h3>
+                <p>White-glove service from concept to cleanup. We handle every detail so you can be fully present with your loved ones.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Our Work</h2>
+        <div class="upload-section">
+            <h3 style="margin-bottom: 1rem; color: #8B0000;">Upload Sample Work Images</h3>
+            <div class="upload-area" onclick="document.getElementById('fileInput').click()">
+                <input type="file" id="fileInput" multiple accept="image/*" style="display: none;" onchange="handleFiles(this.files)">
+                <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">📸 Click to Upload Images</p>
+                <p style="color: #666;">Showcase your beautiful event decorations and setups</p>
+            </div>
+        </div>
+        <div class="gallery-grid" id="galleryGrid">
+            <div class="gallery-item">
+                <div class="gallery-placeholder">
+                    <p>🎨</p>
+                    <p>Handcrafted Birthday Decor</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-placeholder">
+                    <p>🎪</p>
+                    <p>Custom Theme Setup</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-placeholder">
+                    <p>🎮</p>
+                    <p>Interactive Game Stations</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-placeholder">
+                    <p>🎂</p>
+                    <p>Dessert Table Design</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-placeholder">
+                    <p>✨</p>
+                    <p>Personalized Details</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-placeholder">
+                    <p>🌟</p>
+                    <p>Complete Event Transform</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="reviews">
+        <h2>What Families Say</h2>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"Arsiyo turned our living room into a magical underwater kingdom for my daughter's 5th birthday. Every detail was handmade and perfectly personalized. The kids were absolutely mesmerized by the custom games and activities. Worth every penny!"</p>
+                <div class="reviewer">
+                    <div class="reviewer-avatar">PR</div>
+                    <div class="reviewer-info">
+                        <h4>Priya Reddy</h4>
+                        <p>Mother of Two, Fremont</p>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"We've attended many birthday parties, but nothing compares to what this talented couple created for our son's superhero celebration. The level of creativity and attention to detail in every handcrafted piece was extraordinary. They truly care about making each event special."</p>
+                <div class="reviewer">
+                    <div class="reviewer-avatar">JC</div>
+                    <div class="reviewer-info">
+                        <h4>Jennifer Chen</h4>
+                        <p>Mother, Berkeley</p>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"The personalized touch made all the difference. They took time to understand my daughter's favorite colors, characters, and interests, then created a one-of-a-kind celebration she still talks about months later. This is not your average event planning service—it's an experience!"</p>
+                <div class="reviewer">
+                    <div class="reviewer-avatar">MK</div>
+                    <div class="reviewer-info">
+                        <h4>Meera Kapoor</h4>
+                        <p>Mother, San Ramon</p>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"From the initial consultation to the final cleanup, everything was seamless and professional. The custom decorations were museum-quality, and the interactive games kept 20 kids engaged for hours. My wife and I could actually enjoy the party instead of stressing over details!"</p>
+                <div class="reviewer">
+                    <div class="reviewer-avatar">DL</div>
+                    <div class="reviewer-info">
+                        <h4>David Liu</h4>
+                        <p>Father of Three, Pleasanton</p>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"I was skeptical about spending more on event planning, but Arsiyo proved that quality truly matters. The handcrafted elements, the thoughtful personalization, the way they transformed our small apartment into a wonderland—absolutely worth the investment. Our guests are still asking for their contact!"</p>
+                <div class="reviewer">
+                    <div class="reviewer-avatar">SK</div>
+                    <div class="reviewer-info">
+                        <h4>Sarah Kim</h4>
+                        <p>Mother, Oakland</p>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"What sets them apart is their genuine passion. You can tell they pour their hearts into every event. The custom dinosaur decorations for my son's party were incredibly detailed and creative. They even personalized the games to match his learning level. Simply outstanding!"</p>
+                <div class="reviewer">
+                    <div class="reviewer-avatar">AG</div>
+                    <div class="reviewer-info">
+                        <h4>Amit Gupta</h4>
+                        <p>Father, Dublin</p>
+                    </div>
+                </div>
+            </div>
+        </div>
